@@ -9,18 +9,13 @@ import {
   Linking,
   Image
 } from 'react-native'
-import Svg from 'react-native-svg'
+
 import { StatusBar } from 'expo-status-bar'
 import { styles } from './styles'
 
 export default function App() {
   const [text, setText] = useState('')
-
-  function buttonPressed() {
-    return
-    //return console.log(text)
-  }
-
+  
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="dark" />
@@ -28,7 +23,7 @@ export default function App() {
       <Text style={styles.intro}>
         {`Hello, this is an educational test. In my first work, based on an Android application, I made an short intro about my goals as a dev padawan, now I thought about an interactive like experience, and for this purpose I choose two paragraphs of a D&D role playing`}{' '}
         <Text
-          style={{ color: `black`, fontWeight: 'bold' }}
+          style={{ color: `pink`, fontWeight: 'bold' }}
           onPress={() =>
             Linking.openURL(
               'https://wotbs-4e.obsidianportal.com/wikis/vignette-one'
@@ -46,15 +41,13 @@ export default function App() {
         onChangeText={text => setText(text)}
       />
 
-      <TouchableOpacity style={styles.btn} onPress={buttonPressed}>
-        <View>
-          <Text style={{ color: `white`, fontWeight: 'bold' }}>Start</Text>
-        </View>
-      </TouchableOpacity>
+      {/* <TouchableOpacity style={styles.btn} key={operation} onPress={() => {setText(text)}}>
+          <Text style={{ color: `white`, fontWeight: 'bold' }}>{operation}</Text>
+      </TouchableOpacity> */}
 
       <View style={styles.fic}>
         <Image style={styles.pic} source={require('./assets/rpgmage.png')} />
-        <Text style={styles.title}> War of The Burning Sky </Text>
+        <Text style={styles.title}> War of The Blue Sky </Text>
       </View>
 
       <ScrollView style={styles.fic}>
