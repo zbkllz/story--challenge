@@ -21,7 +21,7 @@ export default function App() {
       <StatusBar style="dark" />
 
       <Text style={styles.intro}>
-        {`Hello, this is an educational test. In my first work, based on an Android application, I made an short intro about my goals as a dev padawan, now I thought about an interactive like experience, and for this purpose I choose two paragraphs of a D&D role playing`}{' '}
+        {`Hello, this is an educational test. In my first work, based on an Android application, I made an short intro about my goals as a dev padawan, now I thought about an interactive like experience, and for this purpose I choose two paragraphs of a D&D role playing`}
         <Text
           style={{ color: `pink`, fontWeight: 'bold' }}
           onPress={() =>
